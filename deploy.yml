@@ -4,8 +4,8 @@
 
   become: true
 
-  vars:
-   ansible_sudo_pass: admin
+  vars_files:
+   - files/secrets/credentials.yml
 
   pre_tasks:
     - name: install Epel repo
